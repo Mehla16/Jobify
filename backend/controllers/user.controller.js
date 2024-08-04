@@ -56,6 +56,7 @@ export const login = async (req, res) => {
                 success: false
             });
         };
+        // console.log(email +" , " + password );
         let user = await User.findOne({ email });
         if (!user) {
             return res.status(400).json({
